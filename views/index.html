@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinh viên</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <div class="container" style="padding: 0;">
+        <div class="row" id="container-controller">
+            <div class="col-sm-3" style="padding: 0;">
+                <button type="button" onclick="clearForm()" id="btnThemSinhVien" data-toggle="modal" data-target="#modalThemSinhVien">Thêm sinh viên</button>
+            </div>
+            <div class="col-sm-5" style="text-align: end;">
+            </div>
+        </div>
+        <div class="row">
+            <table class="table table-hover table-bordered" id="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Mã sinh viên</th>
+                        <th scope="col">Tên sinh viên</th>
+                        <!-- <th scope="col">Năm sinh</th> -->
+                        <th scope="col">Mã lớp</th>
+                        <th scope="col">Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="list_sinhvien">
+                    <tr>
+                        <td colspan="6">Loading....</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Thêm sinh viên -->
+    <div id="modal">
+        <div class="modal fade" id="modalThemSinhVien" aria-hidden="true" style="padding: 0;">
+            <div class="modal-dialog">
+                <div class="modal-content" style="text-align: center; padding-top: 0pt; border-radius: 10pt;">
+                    <div style="float: left; width: 100%; padding-top: 5pt;">
+                        <h5 style="color: #000000; font-size: 14pt;">Thêm sinh viên</h5>
+                    </div>
+                    <div id="frm">
+                        <input type="text" name="ma_sinhvien" placeholder="Nhập mã số sinh viên" id="txtMaSV" required>
+                        <br />
+                        <input type="text" name="ten_sinhvien" placeholder="Nhập họ tên sinh viên" id="txtTenSV" required>
+                        <br />
+                        <!-- <input type="date" name="namsinh" placeholder="Nhập năm sinh" id="txtNamSinh" required> -->
+                        <input type="text" name="ma_lop" placeholder="Nhập mã lớp" id="txtMaLop" required>
+                        <br />
+                        <div>
+                            <button id="btnHuy" class="btn btn-danger" data-dismiss="modal">Huỷ</button>
+                            <button id="btnLuu" class="btn btn-primary">Lưu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalUpdateSinhVien" aria-hidden="true" style="padding: 0;">
+        <div class="modal-dialog">
+            <div class="modal-content" style="text-align: center; padding-top: 0pt; border-radius: 10pt;">
+                <div style="float: left; width: 100%; padding-top: 5pt;">
+                    <h5 style="color: #000000; font-size: 14pt;">Cập nhật sinh viên</h5>
+                </div>
+                <div id="frm">
+                    <input type="text" name="ma_sinhvien" placeholder="Nhập mã số sinh viên" id="txtUpMaSV" required>
+                    <br />
+                    <input type="text" name="ten_sinhvien" placeholder="Nhập họ tên sinh viên" id="txtUpTenSV" required>
+                    <br />
+                    <input type="text" name="ma_lop" placeholder="Nhập mã lớp" id="txtUpMaLop" required>
+                    <div>
+                        <button id="btnUpHuy" class="btn btn-danger" data-dismiss="modal">Huỷ</button>
+                        <button id="btnUpLuu" class="btn btn-primary">Cập nhật</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../style/style.js"></script>
+</body>
+
+</html>

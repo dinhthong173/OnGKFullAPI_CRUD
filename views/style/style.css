@@ -1,0 +1,70 @@
+* {
+    padding: 0;
+    margin: auto 0;
+}
+
+#container-controller {
+    padding-top: 20pt;
+    padding-bottom: 20pt;
+}
+
+#btnThemSinhVien {
+    border-radius: 0.5rem;
+    padding: 8pt 10pt 8pt 10pt;
+    border: none;
+    outline: none;
+    background: #016aff;
+    color: #fff;
+    font-weight: 550;
+}
+
+
+
+#txtMaSV,
+#txtTenSV,
+#txtNamSinh,
+#txtUpMaSV,
+#txtUpMaLop,
+#txtUpTenSV,
+#txtMaLop{
+    width: 80%;
+    margin-bottom: 20pt;
+    border: none;
+    border-bottom: 1px solid #c2c2c2;
+    padding: 10pt 0 5pt 0;
+    outline: none;
+}
+
+#btnLuu, #btnUpLuu {
+    border-radius: 0.5rem;
+    width: 120px;
+    padding: 5pt;
+    outline: none;
+}
+
+#btnHuy, #btnUpHuy{
+    outline: none;
+    border-radius: 0.5rem;
+    padding-right:15pt;
+    padding-left: 15pt;
+}
+
+#frm div{
+    text-align: end;
+    margin-top: 10pt;
+    margin-bottom: 30pt;
+    padding-right: 25pt;
+}
+
+#btnDeleteSinhVien, #btnUpdate{
+    outline: none;
+    border-radius: 0.5rem;
+    color: #fff;
+    background-color: #C82333;
+    border: none;
+    padding: 8px;
+}
+
+td, th{
+    text-align: center;
+  }
